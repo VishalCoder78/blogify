@@ -12,9 +12,10 @@
             referrerpolicy="origin"></script>
 </head>
 <body>
-    
-    <form action="{{route('user-blog')}}" method="POST" class="pt-6 w-[70rem] mx-auto">
-        @csrf
+    <div>
+
+        <form action="{{route('user-blog')}}" method="POST" class="pt-6  mx-20">
+            @csrf
         <input type="text" name="user_id" id="user_id" value="{{ $data->id}}" class="hidden">
         <input type="text" name="user_name" id="user_name" value="{{ $data->name}}" class="hidden">
         <input type="text" name="user_email" id="user_email" value="{{ $data->email}}" class="hidden">
@@ -24,8 +25,9 @@
             <button class="py-2 px-6 rounded-lg m-6 bg-blue-600 border text-white">Submit</button>
         </div>
     </form>
+</div>
     
-
+    
     <script>
         tinymce.init({
             selector: 'input.blog',

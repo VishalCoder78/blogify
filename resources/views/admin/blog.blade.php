@@ -29,17 +29,15 @@
                             <!-- Selected: "bg-gray-100 text-gray-900 hover:bg-gray-200", Not Selected: "bg-white text-gray-500 hover:bg-gray-100 hover:text-gray-900" -->
                             <form action="blogStatus/{{ $blog->id }}" method="post">
                                 @csrf
-                                <input type="text" class="hidden" name="blog_status" id="blog_status"
-                                    value="Accept">
+                                <input type="text" class="hidden" name="blog_status" id="blog_status" value="Accept">
                                 <button type="submit" name="accept"
                                     class="bg-indigo-600 text-white hover:bg-indigo-700  w-max rounded-md border border-transparent px-3 py-1.5 text-sm font-medium"
                                     aria-controls="tabs-1-panel-1" role="tab">Accept</button>
                             </form>
                             <form action="blogStatus/{{ $blog->id }}" method="POST">
                                 @csrf
-                                <input type="text" class="hidden" name="blog_status" id="blog_status"
-                                    value="declin">
-                                <button type="submit"  id="declineButton"
+                                <input type="text" class="hidden" name="blog_status" id="blog_status" value="declin">
+                                <button type="submit" id="declineButton"
                                     class="bg-red-600 text-white hover:bg-red-700  w-max ml-2 rounded-md border border-transparent px-3 py-1.5 text-sm font-medium"
                                     aria-controls="tabs-1-panel-1" role="tab" type="button">Decline</button>
                             </form>
@@ -48,6 +46,7 @@
 
                     </li>
                 @endif
+
             </div>
         @endforeach
     </div>
