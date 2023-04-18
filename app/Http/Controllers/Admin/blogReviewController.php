@@ -12,21 +12,18 @@ class blogReviewController extends Controller
     public function getBlog()
     {
         $blogs = userBlog::all();
+        $blogStatus = userBlog::all();
         return view('admin.blog', compact('blogs'));
     }
-    public function blogStatus(Request $request)
+    public function blogStatus(Request $request,$id)
     {
-        $status = new blogStatus();
-        $status-> user_name = $request->user_name;
-        $status-> user_email = $request->user_email;
-        $status-> blog = $request->blog;
-        $status-> user_id = $request->user_id;
-        $status-> blog_status = $request->blog_status;
-        $res = $status->save();
+        $status =userBlog::find($id);
+        $status->blog_status = $request->blog_status;
+        $status->update();
         return back();
     }
-    public function decline()
-    {
-        dd('Blog Decline');
-    }
+    // public function decline()
+    // {
+    //     dd('Blog Decline');
+    // }
 }

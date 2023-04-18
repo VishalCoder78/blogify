@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\blogStatus;
+use App\Models\userBlog;
 
 class homeController extends Controller
 {
     public function dashboard()
     {
-        $blogs = blogStatus::all();
+        $blogs = userBlog::all();
         return view('dashboard', compact('blogs'));
     }
 }

@@ -18,6 +18,7 @@
         <input type="text" name="user_id" id="user_id" value="{{ $data->id}}" class="hidden">
         <input type="text" name="user_name" id="user_name" value="{{ $data->name}}" class="hidden">
         <input type="text" name="user_email" id="user_email" value="{{ $data->email}}" class="hidden">
+        <input type="text" name="blog_status" id="blog_status" value="Review" class="hidden">
         <input type="text" name="blog" id="blog" class="blog w-80">
         <div class=" flex justify-end">
             <button class="py-2 px-6 rounded-lg m-6 bg-blue-600 border text-white">Submit</button>

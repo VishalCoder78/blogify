@@ -2,7 +2,7 @@
     <div class="h-full w-full">
         @foreach ($blogs as $blog)
             <div>
-                @if ($blog->blog_status == 'accept')
+                @if ($blog->blog_status == 'Accept')
                 <li class=" grid grid-cols-1 gap-8 border rounded-lg bg-gray-200 m-20">
 
                     <div>

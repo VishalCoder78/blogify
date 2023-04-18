@@ -46,7 +46,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin/')->group(function(){
     Route::middleware('admin')->group(function(){
         Route::get('dashboard',[App\Http\Controllers\Admin\HomeController::class , 'dashboard'])->name('dashboard');
         Route::get('blog', [App\Http\Controllers\Admin\blogReviewController::class ,'getBlog'])->name('blog');
-        Route::post('blogStatus', [App\Http\Controllers\Admin\blogReviewController::class , 'blogStatus'])->name('accept');
+        Route::post('blogStatus/{id}', [App\Http\Controllers\Admin\blogReviewController::class , 'blogStatus']);
 
     });
     Route::post('logout',[App\Http\Controllers\Admin\Auth\AuthenticatedSessionController::class , 'destroy'])->name('logout');

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('user_email');
             $table->string('blog');
             $table->string('user_id');
+            $table->string('blog_id');
             $table->string('blog_status');
             $table->timestamps();
         });
