@@ -40,8 +40,6 @@ Route::namespace('Admin')->prefix('admin')->name('admin/')->group(function(){
         //login
         Route::get('login',[App\Http\Controllers\Admin\Auth\AuthenticatedSessionController::class , 'create'])->name('login');
         Route::post('login',[App\Http\Controllers\Admin\Auth\AuthenticatedSessionController::class , 'store'])->name('adminlogin');
-        Route::get('register',[App\Http\Controllers\Admin\Auth\AuthenticatedSessionController::class , 'registerView'])->name('register');
-        Route::post('register',[App\Http\Controllers\Admin\Auth\AuthenticatedSessionController::class , 'register'])->name('register');
     });
     Route::middleware('admin')->group(function(){
         Route::get('dashboard',[App\Http\Controllers\Admin\HomeController::class , 'dashboard'])->name('dashboard');
