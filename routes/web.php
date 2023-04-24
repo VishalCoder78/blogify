@@ -24,6 +24,8 @@ Route::get('/dashboard', [App\Http\Controllers\homeController::class, 'dashboard
 Route::get('/blog', [App\Http\Controllers\blogController::class ,'viewBlog'])->middleware(['auth', 'verified'])->name('blog');;
 Route::get('/project', [App\Http\Controllers\projectController::class ,'project'])->middleware(['auth', 'verified'])->name('blog');;
 Route::post('/user-blog', [App\Http\Controllers\blogController::class ,'blog'])->name('user-blog');
+Route::get('/blog/{id}', [App\Http\Controllers\blogDetailsController::class, 'blogDetails' ]);
+Route::post('/comment', [App\Http\Controllers\blogCommentController::class, 'storeComment'])->name('comment');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -45,6 +47,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin/')->group(function(){
         Route::get('dashboard',[App\Http\Controllers\Admin\HomeController::class , 'dashboard'])->name('dashboard');
         Route::get('blog', [App\Http\Controllers\Admin\blogReviewController::class ,'getBlog'])->name('blog');
         Route::post('blogStatus/{id}', [App\Http\Controllers\Admin\blogReviewController::class , 'blogStatus']);
+        Route::get('/blog/{id}', [App\Http\Controllers\Admin\blogDetailsController::class, 'blogDetails' ]);
 
     });
     Route::post('logout',[App\Http\Controllers\Admin\Auth\AuthenticatedSessionController::class , 'destroy'])->name('logout');
