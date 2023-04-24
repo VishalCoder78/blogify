@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-gray-800 border-b border-gray-100">
+<nav x-data="{ open: false }" class="bg-gray-800 border-b border-gray-800">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -12,20 +12,26 @@
 
                 <!-- Navigation Links -->
                 <div class=" space-x-7 sm:-my-px sm:ml-10 sm:flex ">
-                    <a href="dashboard" class=" text-white bg-black h-max rounded-md px-3 py-2 my-auto text-sm font-medium"
+                    {{-- <a href="dashboard" class=" text-white bg-black h-max rounded-md px-3 py-2 my-auto text-sm font-medium"
                             aria-current="page">Dashboard</a>
     
                             <a href="blog"
-                            class="text-gray-300  hover:text-white rounded-md px-3 py-6 text-sm font-medium">Blog</a>
+                            class="text-gray-300  hover:text-white rounded-md px-3 py-6 text-sm font-medium">Blog</a> --}}
     
-                        <a href="#"
-                            class="text-gray-300  hover:text-white rounded-md px-3 py-6 text-sm font-medium">Projects</a>
-    
-                        <a href="#"
-                            class="text-gray-300  hover:text-white rounded-md px-3 py-6 text-sm font-medium">Contect</a>
-                    {{-- <x-nav-link :href="route('admin/dashboard')" :active="request()->routeIs('admin/dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link> --}}
+                            
+                            <x-nav-link :href="route('admin/dashboard')" :active="request()->routeIs('admin/dashboard')">
+                                {{ __('Dashboard') }}
+                            </x-nav-link>
+                            
+                            <x-nav-link :href="route('admin/blog')" :active="request()->routeIs('admin/blog')">
+                                {{ __('Blog') }}
+                            </x-nav-link>
+                            
+                            <a href="#"
+                                class="text-gray-300  hover:text-white rounded-md px-3 py-6 text-sm font-medium">Projects</a>
+        
+                            <a href="#"
+                                class="text-gray-300  hover:text-white rounded-md px-3 py-6 text-sm font-medium">Contect</a> 
                 </div>
             </div>
 

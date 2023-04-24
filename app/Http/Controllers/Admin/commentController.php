@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\comment;
-class blogCommentController extends Controller
+
+class commentController extends Controller
 {
     public function storeComment(Request $request)
     {

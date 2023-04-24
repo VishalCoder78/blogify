@@ -12,20 +12,37 @@
 
                 <!-- Navigation Links -->
                 <div class=" space-x-7 sm:-my-px sm:ml-10 sm:flex ">
-                    <a href="dashboard" class="text-white bg-black h-max rounded-md px-3 py-2 my-auto text-sm font-medium"
-                            aria-current="page">Dashboard</a>
+                    {{-- <a href="dashboard" class="text-white bg-black h-max rounded-md px-3 py-2 my-auto text-sm font-medium"
+                            aria-current="page">Dashboard</a> --}}
     
-                            <a href="/blog"
+                            {{-- <a href="/blog"
                             class="text-gray-300  hover:text-white rounded-md px-3 py-6 text-sm font-medium">Blog</a>
     
                         <a href="/project"
                             class="text-gray-300  hover:text-white rounded-md px-3 py-6 text-sm font-medium">Projects</a>
     
                         <a href="#"
-                            class="text-gray-300  hover:text-white rounded-md px-3 py-6 text-sm font-medium">Contect</a>
-                    {{-- <x-nav-link :href="route('admin/dashboard')" :active="request()->routeIs('admin/dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link> --}}
+                            class="text-gray-300  hover:text-white rounded-md px-3 py-6 text-sm font-medium">Contect</a> --}}
+                            <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                                {{ __('Dashboard') }}
+                            </x-nav-link>
+                            
+                            <x-nav-link :href="route('blog')" :active="request()->routeIs('blog')">
+                                {{ __('Blog') }}
+                                
+                            </x-nav-link>
+
+                            <x-nav-link :href="('/project')" :active="request()->routeIs('project')">
+                                {{ __('Project') }}
+                                
+                            </x-nav-link>
+
+                            <a href="#"
+                                class="text-gray-300  hover:text-white rounded-md px-3 py-6 text-sm font-medium">Contect</a>
+                    
+                    
+                    
+
                 </div>
             </div>
 

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('blog_id');
             $table->string('user_name');
+            $table->string('auth_type');
             $table->string('comment');
             $table->timestamps();
         });

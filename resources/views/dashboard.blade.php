@@ -47,7 +47,7 @@
                                         fill="#16a34a"></path>
                                 </svg></span>
                             <span class="mr-8">
-                                <p class="text-green-600 font-bold ml-1">{{ $blog->updated_at }}</p>
+                                <p class="text-green-600 font-bold ml-1">{{ $blog->updated_at->format('d/m/Y') }}</p>
 
                             </span>
                         </div>

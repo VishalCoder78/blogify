@@ -65,6 +65,7 @@
                     <div class="w-full">
                         <input type="text" class="hidden" value=" {{ request()->route('id') }} " name="blog_id">
                         <input type="text" class="hidden" value="{{ Auth::user()->name }}" name="user_name">
+                        <input type="text" class="hidden" value="user" name="auth_type">
                         <input name="comment" class=" rounded-lg px-1 py-2 w-full text-sm text-gray-400 bg-gray-900"
                             placeholder="Write a comment..." required />
                     </div>
