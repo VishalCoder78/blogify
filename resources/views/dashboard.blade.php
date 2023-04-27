@@ -3,7 +3,7 @@
         @foreach ($blogs as $blog)
             <div>
                 @if ($blog->blog_status == 'Accept')
-                    <div class="w-[40rem] mx-auto my-20">
+                    <div class="w-[40rem] mx-auto mt-20 pb-16">
                         <a href="/blog/{{ $blog->id }}"
                             class=" text-4xl text-gray-300 font-bold my-4 leading-10">{{ $blog->blog_title }}</a>
                         <div class="flex py-4">
