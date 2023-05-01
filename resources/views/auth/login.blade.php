@@ -1,7 +1,7 @@
 <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
-    <h2 class="text-center text-4xl font-semibold py-4">User Login</h2>
+    <h2 class="text-center text-4xl font-semibold py-4 text-gray-200">User Login</h2>
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
@@ -30,18 +30,18 @@
             <div class="block ">
                 <label for="remember_me" class="inline-flex items-center">
                     <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                    <span class="ml-2 text-sm text-gray-400">{{ __('Remember me') }}</span>
                 </label>
             </div>
             @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
+                <a class="underline text-sm text-gray-400 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
                     {{ __('Forgot your password?') }}
                 </a>
             @endif
 
         </div>
-        <button type="submit" class="w-full my-6 text-black border bg-indigo-600 bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Login</button>
-        <p>Create new account <a href="/register" class="text-indigo-600 font-semibold">Register</a></p>
+        <button type="submit" class="w-full my-6 text-black border bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Login</button>
+        <p class="text-gray-300">Create new account <a href="/register" class="text-indigo-600 font-semibold">Register</a></p>
 
     </form>
 </x-guest-layout>
